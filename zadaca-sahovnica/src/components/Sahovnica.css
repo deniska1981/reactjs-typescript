@@ -1,0 +1,20 @@
+.sahovnica {
+  border: 1px solid red;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  margin-left: 25rem;
+  margin-right: 25rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
+  height: 61vh;
+  width: 480px;
+}
+
+.sahovnica div {
+  flex-basis: 20%;
+  height: 7vw;
+  overflow: hidden;
+}
