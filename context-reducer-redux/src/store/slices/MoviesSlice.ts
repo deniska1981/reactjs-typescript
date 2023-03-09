@@ -1,11 +1,12 @@
 import { createSlice, PayloadAction, createAsyncThunk } from "@reduxjs/toolkit";
 import type { RootState } from "../store";
+import env from "ts-react-dotenv";
 
 export const fetchMovies = createAsyncThunk(
   "movies/fetchMovies",
   async (name: string) => {
     const response = await fetch(
-      `https://api.themoviedb.org/3/search/movie?query=${name}&api_key=ab8596081145bffa991ffe5317e1d3c4`,
+      `https://api.themoviedb.org/3/search/movie?query=${name}&api_key=${env.MOVIE_API_KEY}`,
       {
         headers: {
           accept: "application/json, text/plain, */*",

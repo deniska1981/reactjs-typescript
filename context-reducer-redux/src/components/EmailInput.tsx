@@ -1,21 +1,21 @@
 import React, { useEffect, memo } from "react";
 
-// First one to render a user's email:
+// First one to render a user's password:
 
-type EmailInputProps = {
+type PasswordInputProps = {
   value: string;
   onChange: (newValue: string) => void;
 };
 
-const EmailInput: React.FC<EmailInputProps> = ({ value, onChange }) => {
+const PasswordInput: React.FC<PasswordInputProps> = ({ value, onChange }) => {
   useEffect(() => {
-    console.log("Email renderiran");
+    console.log("Password renderiran");
   });
   return (
     <label>
-      Your email:
+      Your password:
       <input
-        type="email"
+        type="password"
         value={value}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           onChange(e.target.value)
@@ -25,4 +25,4 @@ const EmailInput: React.FC<EmailInputProps> = ({ value, onChange }) => {
   );
 };
 
-export default memo(EmailInput);
+export default memo(PasswordInput);
