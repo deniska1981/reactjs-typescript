@@ -6,6 +6,8 @@ import { ThemeContext } from "./context/ThemeContext";
 
 import "./App.css";
 import Dijete from "./components/Dijete";
+import MemoExample from "./components/MemoExample";
+import CallbackExample from "./components/CallbackExample";
 import { store } from "./store/store";
 
 type CountriesProbabilities = {
@@ -87,6 +89,8 @@ function App() {
             <Dijete />
           </ColorContext.Provider>
         </div>
+        <MemoExample />
+        <CallbackExample />
       </ThemeContext.Provider>
     </Provider>
   );
